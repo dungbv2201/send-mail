@@ -1,0 +1,22 @@
+<!--@subject {{trans "The customer %customer_name has been logged into the %store_name" store_name=$store.getFrontendName() customer_name=$customer.name}} @-->
+<!--@vars {
+"var store.getFrontendName()":"Store Name",
+"var blog":"product dung",
+"var administrator_name":"Administrator Name"
+} @-->
+<style type="text/css">
+    {{var template_styles|raw}}
+
+    {{css file="Dung_Email::css/email.css"}}
+</style>
+{{template config_path="design/email/header_template"}}
+<!--{{inlinecss file="Dung_Email::css/email-inline.css"}}-->
+
+{{var products|raw}}
+
+<p>
+    {{trans "successfully"|row}}
+</p>
+
+{{template config_path="design/email/footer_template"}}
+

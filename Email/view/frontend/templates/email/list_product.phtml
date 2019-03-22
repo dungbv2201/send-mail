@@ -1,0 +1,15 @@
+<?php
+    $products = $block->getProductCollection()->toArray();
+?>
+<table class="dung-blog">
+    <tr class="item">
+        <th class="item">Name</th>
+        <th class="item">Description</th>
+    </tr>
+    <?php foreach($products as $product):?>
+        <tr>
+            <td><?=$product['name']  ?></td>
+            <td><?=$product['description']  ?></td>
+        </tr>
+    <?php endforeach; ?>
+</table>
